@@ -1,11 +1,42 @@
+
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  margin: 2rem;
-  line-height: 1.6;
 }
-header, section, footer {
-  margin-bottom: 2rem;
+
+.contenedor-principal {
+  display: flex;
 }
-h1 {
-  margin-bottom: 0;
+
+.foto {
+    width: 100%;                    /* Tamaño de la imagen */
+    height: auto;
+    border-radius: 5%;                  /* Borde redondo */
+    border: 2px solid #000000;          /* Borde color */
+    display: block;                     /* Centrado */    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);  /* Sombra elegante */
+}
+
+.imagenes-proyecto {
+    width: 25%;
+    height: auto;
+}
+
+/*Cuadro principal*/
+.cuadro-principal {
+  padding: 20px;
+  flex: 1; /* ocupa todo el espacio restante */
+}
+
+
+/* Rectángulo lateral derecho */
+.rectangulo-lateral {
+  width: 300px;            /* Ancho del rectángulo */
+  height: 225vh;           /* Altura de toda la ventana */
+  background-color: #2c3e50;  /* Color de fondo */
+  color: white;            /* Color del texto */
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2); /* Sombra sutil */
+  overflow-y: auto;        /* Scroll si el contenido es largo */
+  
 }
