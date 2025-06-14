@@ -1,42 +1,169 @@
+/* ==========================
+   Reset y estilos base
+   ========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.contenedor-principal {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;        /* Centrado completo */
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+
+/* ==========================
+   Contenedor principal
+   ========================== */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;    /* Centro de su contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* ==========================
+   Tipografía y encabezados
+   ========================== */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #212529;
+  text-align: center;
+}
+
+
+/* ==========================
+   Imágenes de proyecto y perfil
+   ========================== */
 .foto {
-    width: 100%;                    /* Tamaño de la imagen */
-    height: auto;
-    border-radius: 5%;                  /* Borde redondo */
-    border: 2px solid #000000;          /* Borde color */
-    display: block;                     /* Centrado */    
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);  /* Sombra elegante */
+  display: block;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 5rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.imagenes-proyecto {
-    width: 25%;
-    height: auto;
+/* ==========================
+   Secciones y espaciado
+   ========================== */
+section {
+  margin-bottom: 3rem;
+}
+p ,ul {
+  margin-bottom: 1rem;
+  color: #212529;
+  text-align: center;
 }
 
-/*Cuadro principal*/
-.cuadro-principal {
-  padding: 20px;
-  flex: 1; /* ocupa todo el espacio restante */
+.cuadro-uno,
+.info-card,
+.habilidades-card,
+.estudios-card {
+  background-color: #ffffff;           /* fondo blanco */
+  border-radius: 12px;                 /* bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  padding: 2rem;
+  margin: 2rem auto;                   /* espacio vertical y centrado horizontal */
+  max-width: 900px;                    /* ancho máximo */
+  text-align: center;                 /* centra texto dentro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;                /* centra contenido horizontalmente */
+}
+
+/* Si alguno tiene imágenes */
+.cuadro-uno img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para encabezado dentro de las cards */
+.cuadro-uno h2,
+.info-card h2,
+.habilidades-card h2,
+.estudios-card h2 {
+  font-size: 1.6rem;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para texto */
+.cuadro-uno p,
+.info-card p,
+.habilidades-card p,
+.estudios-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
 
-/* Rectángulo lateral derecho */
-.rectangulo-lateral {
-  width: 300px;            /* Ancho del rectángulo */
-  height: 225vh;           /* Altura de toda la ventana */
-  background-color: #2c3e50;  /* Color de fondo */
-  color: white;            /* Color del texto */
-  padding: 20px;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.2); /* Sombra sutil */
-  overflow-y: auto;        /* Scroll si el contenido es largo */
-  
+.resaltado {
+  background-color: #d4edda; /* verde clarito */
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin: 0 2px;
+  display: inline-block;
 }
+
+.proyecto-card, .proyecto-card1, .proyecto-card2 {
+  display: flex;
+  flex-direction: row; /* aseguramos que estén en fila */
+  margin: 2rem 0;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.proyecto-info, .proyecto-info1, .proyecto-info2, .cuadro-uno{
+  background-color: #abe0ab;
+  color: #000; /* mejor contraste */
+  padding: 1.5rem;
+  width: 35%;
+  display: flex;
+  flex-direction: column; /* correcto */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+.proyecto-detalle, .proyecto-detalle1, .proyecto-detalle2 {
+  padding: 1.5rem;
+  width: 65%; /* Complementa al 35% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+}
+
